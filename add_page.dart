@@ -24,8 +24,8 @@ void main(List<String> args) {
   ];
 
   final files = {
-    '$rootDir/lib/ui/pages/$page_name/$page_name.dart': _newPageContent(PageName),
-    '$rootDir/lib/ui/pages/$page_name/view_model/${page_name}_view_model.dart': _newPageViewModelContent(PageName),
+    '$rootDir/lib/ui/pages/$page_name/${page_name}_page.dart': _newPageContent(PageName),
+    '$rootDir/lib/ui/pages/$page_name/view_model/${page_name}_page_view_model.dart': _newPageViewModelContent(PageName),
   };
 
  // Create directories
@@ -47,7 +47,7 @@ void main(List<String> args) {
 String _newPageViewModelContent(String pageName)=>'''
 import 'package:flutter/material.dart';
 
-class ${pageName}ViewModel extends ChangeNotifier {  
+class ${pageName}PageViewModel extends ChangeNotifier {  
 }
 
 ''';
@@ -57,8 +57,8 @@ class ${pageName}ViewModel extends ChangeNotifier {
 String _newPageContent(String pageName) => '''
 import 'package:flutter/material.dart';
 
-class $pageName extends StatelessWidget {
-  const $pageName({super.key});
+class ${pageName}Page extends StatelessWidget {
+  const ${pageName}Page({super.key});
 
   @override
   Widget build(BuildContext context) {
