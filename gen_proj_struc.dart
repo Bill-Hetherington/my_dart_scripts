@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:core';
 
+///A script to be run when starting a new project to follow my prefered design pattern
 ///Usage: just call this script in the destination you want the folder structure made 
 ///e.g dart run ../my_dart_scripts/project_structure_build.dart
 void main() {
